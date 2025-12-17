@@ -1,0 +1,14 @@
+
+.footer-page{
+ background-color: var(--cor-roxo-escuro);
+   padding: 10px;
+  width: 100%; 
+  text-align: center;
+  color: white;
+
+}
+.footer-page p {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}

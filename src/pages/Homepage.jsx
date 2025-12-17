@@ -1,19 +1,26 @@
 import '../styles/homepage.css';
 import Header from '../components/Header';
 import CardPerfil from '../components/CardPerfil';
+import Rodape from '../components/Rodape';
 function Homepage({children}) {
     return(
-        <div> 
-            <Header />
-             <main>
-                <div>
-                 <CardPerfil />   
-                </div>
-                {children}
+       
+      <div className="layout-homepage">
+      <Header />
 
+      <main className="main-homepage">
+        <CardPerfil />
+        {children}
+      </main>
 
-             </main>
-        </div>
+        <Rodape>
+            <p>© 2024 Jefferson Sampaio. Todos os direitos reservados.</p>
+        </Rodape>
+     
+    </div>
+           
+      
+         
        
     );
 
