@@ -1,5 +1,5 @@
 
-function Homepage({ children}) {
+function Homepage({children}) {
     return(
         <div> 
              <main>{children}</main>

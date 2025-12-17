@@ -4,14 +4,16 @@ import Dashboard from './pages/Dashboard'
 import Login from './pages/Login'
 
 function App() {
-
+  const adminPath = import.meta.env.VITE_ADMIN_PATH;
+  const dashboardPath = import.meta.env.VITE_DASHBOARD_PATH;
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Homepage />} />
 
-        <Route path='/login' element={<Login />} />
-        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path={adminPath} element={<Login />} />
+        <Route path={dashboardPath} element={<Dashboard />} />
+        
       </Routes>
     </BrowserRouter>
   );
