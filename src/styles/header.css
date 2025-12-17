@@ -7,6 +7,10 @@ header {
    
 }
 
+header a {
+    text-decoration: none; 
+}
+
 header ul {
     background-color: #2B2C81; 
     display: flex;

@@ -2,7 +2,7 @@ import '../styles/homepage.css';
 import Header from '../components/Header';
 import CardPerfil from '../components/CardPerfil';
 import Rodape from '../components/Rodape';
-function Homepage({children}) {
+function Homepage() {
     return(
        
       <div className="layout-homepage">
@@ -10,7 +10,7 @@ function Homepage({children}) {
 
       <main className="main-homepage">
         <CardPerfil />
-        {children}
+    
       </main>
 
         <Rodape>
