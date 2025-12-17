@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Homepage from './pages/Homepage'
 import Dashboard from './pages/Dashboard'
 import Login from './pages/Login'
+import './styles/index.css'
 
 function App() {
   const adminPath = import.meta.env.VITE_ADMIN_PATH;
