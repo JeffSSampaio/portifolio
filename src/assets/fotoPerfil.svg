@@ -1,25 +1,17 @@
-<svg width="1985" height="1850" viewBox="0 0 1985 1850" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g filter="url(#filter0_f_16_6)">
-<ellipse cx="992.15" cy="924.716" rx="392.15" ry="324.716" fill="#D9D9D9"/>
-</g>
-<ellipse cx="1052.28" cy="865.036" rx="487.256" ry="472.5" fill="#D9D9D9"/>
-<ellipse cx="992.817" cy="882.341" rx="469.278" ry="455.196" fill="#2B2C81"/>
-<g filter="url(#filter1_d_16_6)">
-<ellipse cx="989.715" cy="883.14" rx="389.715" ry="367.5" fill="white"/>
-<mask id="mask0_16_6" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="600" y="515" width="780" height="736">
-<ellipse cx="989.715" cy="883.14" rx="389.715" ry="367.5" fill="white"/>
+<svg width="1221" height="1057" viewBox="0 0 1221 1057" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<ellipse cx="657.744" cy="472.5" rx="487.256" ry="472.5" fill="#D9D9D9"/>
+<ellipse cx="598.278" cy="489.805" rx="469.278" ry="455.196" fill="#2B2C81"/>
+<g filter="url(#filter0_d_16_6)">
+<ellipse cx="595.176" cy="490.604" rx="389.715" ry="367.5" fill="white"/>
+<mask id="mask0_16_6" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="205" y="123" width="780" height="736">
+<ellipse cx="595.176" cy="490.604" rx="389.715" ry="367.5" fill="white"/>
 </mask>
 <g mask="url(#mask0_16_6)">
-<rect x="593.226" y="385.601" width="791.798" height="1057.56" rx="47" fill="url(#pattern0_16_6)"/>
+<rect x="198.687" y="-6.93555" width="791.798" height="1057.56" rx="47" fill="url(#pattern0_16_6)"/>
 </g>
 </g>
 <defs>
-<filter id="filter0_f_16_6" x="0" y="0" width="1984.3" height="1849.43" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="300" result="effect1_foregroundBlur_16_6"/>
-</filter>
-<filter id="filter1_d_16_6" x="596" y="515.64" width="787.43" height="743" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_16_6" x="201.461" y="123.104" width="787.43" height="743" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
