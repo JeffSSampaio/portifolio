@@ -2,8 +2,9 @@ header {
     width: 100%;
     display: flex;
     justify-content: center; 
-    padding-top: 10px;       
+    padding-top: 25px;       
     background-color: transparent; 
+   
 }
 
 header ul {
@@ -15,7 +16,7 @@ header ul {
     padding: 10px 50px;       
     border-radius: 10px;      
     list-style: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 header ul li {
