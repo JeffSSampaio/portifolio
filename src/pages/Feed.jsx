@@ -1,5 +1,7 @@
+import  useTitulo  from '../hooks/useTitulo';
 
 function Feed() {
+    useTitulo('Feed');
     return(
         <div>
           <h1>Pagina de Feed</h1>

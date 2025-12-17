@@ -1,26 +1,25 @@
 import { useState } from "react";
-import { auth } from "../config/firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { useAuth } from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
-
+import  useTitulo  from "../hooks/useTitulo";
 function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const { login } = useAuth();
   const navigate = useNavigate();
   const dashboardPath = import.meta.env.VITE_DASHBOARD_PATH;
 
   const handleLogin = async (e) =>{
     e.preventDefault();
     try{
-      await signInWithEmailAndPassword(auth, email, senha);
+      await login(email, senha);
       alert("acesso autorizado")
       navigate(dashboardPath);
-
-
     } catch(erro){
       alert("Credenciais inválidas" + erro.message);
     }
   }
+  useTitulo('Admin Login');
 
     return(
         <div className="login-container"> 
