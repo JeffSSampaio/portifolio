@@ -23,15 +23,15 @@ function Login() {
   }
 
     return(
-        <div className="login-container flex h-screen justify-center items-center"> 
-            <form onSubmit={handleLogin} className="login-form flex flex-col gap-4 bg-white p-6 rounded shadow-md">
-                <h2 className="text-2xl font-bold mb-4">Admin Login</h2>
+        <div className="login-container"> 
+            <form onSubmit={handleLogin} className="login-form">
+                <h2 className="texto-tittulo">Admin Login</h2>
                 <input
                   type="email"
                   placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="p-2 border border-gray-300 rounded"
+                  className="input-email"
                   required
                 />
                 <input
@@ -39,7 +39,7 @@ function Login() {
                   placeholder="Senha"
                   value={senha}
                   onChange={(e) => setSenha(e.target.value)}
-                  className="p-2 border border-gray-300 rounded"
+                  className="input-senha"
                   required
                 />
                 <button type="submit" className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
