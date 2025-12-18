@@ -1,7 +1,7 @@
-
+@import 'tailwindcss';
 
 :root {  
   --cor-roxo-claro: #5556B8;     
-  --cor-roxo-escuro: #2B2C81;   
+  --cor-roxo-escuro: hsl(239, 50%, 34%);   
   --cor-branca: #FFFFFF;         
 }
