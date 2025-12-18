@@ -23,17 +23,17 @@ header ul {
     box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
-header ul li {
+header ul li a {
     color: white;
     font-size: 35px;
     font-family: 'League Spartan', sans-serif;
     font-weight: 700;
-    cursor: pointer;
-    white-space: nowrap;      
+    text-decoration: none;
+    display: inline-block;
 }
 
-header ul li:hover {
-    color: #5556B8; 
-    transform: scale(1.1); 
-    transition: transform 0.3s, color 0.3s; 
+header ul li a:hover {
+    color: #5556B8;
+    transform: scale(1.1);
+    transition: transform 0.3s, color 0.3s;
 }
