@@ -1,11 +1,11 @@
 
 import  useTitulo  from '../hooks/useTitulo';
-
+import Header from '../components/Header';
 function Info() {
     useTitulo('Info');
     return(
         <div>
-          <h1>Pagina de Informações</h1>
+              <Header children={<li><a href="/homepage">Home</a></li>}/>
         </div>
     )
 }
