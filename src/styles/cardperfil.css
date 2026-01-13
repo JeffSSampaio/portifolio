@@ -1,8 +1,7 @@
 .card-perfil {
     background-color: var(--cor-roxo-escuro);
     padding: 60px;
-    margin: 20px;
-    width: 65rem;
+    margin: 20px auto;
      min-height: 40rem;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
@@ -80,7 +79,7 @@
      
 }
 
-.container-redes-perfil {
+.container-perfil {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -89,7 +88,7 @@
     margin-top: 15px;
 }
 
-.container-redes-perfil h3 {
+.container-perfil h3 {
     font-family: 'League Spartan', sans-serif;
     font-size: 30px;
     color: white;
