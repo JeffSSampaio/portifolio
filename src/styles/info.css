@@ -1,0 +1,134 @@
+
+
+.container-foto-info {
+    position: relative;
+    border-radius: 50%;
+
+    margin-top: 20px;
+   
+}
+
+.container-foto-info::before {
+    content: "";
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.6) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(120, 130, 255, 0.1) 60%,
+        transparent 70%
+    );
+
+    border-radius: 50%;
+    filter: blur(25px);
+    z-index: 0;
+}
+
+
+
+
+.fotoPerfilInfo{
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+    z-index: 0;
+}
+
+.card-info {
+    background-color: var(--cor-roxo-escuro, #3730a3);
+    margin:40px auto;
+    padding: 10px ;
+    width: 55%;
+    max-width: 65rem;
+    min-height: 40rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding-bottom: 20px;
+    border: 3px solid white;
+}
+
+
+.conteudo-info {
+    font-family: 'League Spartan', sans-serif;
+    color: var(--cor-branca);
+    font-weight: 800;
+    font-size: 35px;
+    padding: 20px;
+     letter-spacing: 0.9px;
+      line-height: 1.15;
+      text-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.35),
+        0 1px 0 ;
+        white-space: nowrap;
+}
+
+.conteudo-info p{
+     -webkit-text-stroke: 0.9px white;
+     color: transparent;
+    
+}
+
+/* Barra personalizada */
+.border-white {
+    border-color: rgba(255, 255, 255, 0.6) !important;
+    width: 600px !important;
+    margin: 10px;
+    height: 3px !important;
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    border: none !important;
+    opacity: 0.6;
+}
+
+/* seções */
+
+.sobre-mim, .formacao-academica, .experiencias {
+ padding: 15px;
+ max-width: 800px;
+ background-color: var(--cor-roxo-claro);
+ border-radius: 15px;
+}
+
+.sobre-mim h2, .formacao-academica h2, .experiencias h2 {
+    font-size: 40px;
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 800;
+    text-align: justify;
+    color: white;
+    text-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.35),
+        0 1px 0 ;
+    white-space: nowrap;
+}
+
+.sobre-mim , .formacao-academica , .experiencias  {
+    font-size: 25px;
+    margin-top: 15px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-align: justify;
+    color: white;
+    line-height: 1.5;
+    text-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.35),
+        0 1px 0 ;
+}
+
+
+.formacao-academica ul li{
+   font-size:25.2px;
+    margin-left: 20px;
+}
