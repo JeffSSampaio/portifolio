@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 
-function Card({children, width='auto', height, borderRadius = 8 ,padding='auto',margin='auto' ,backgroundColor='#2b2f7f', isHover = false, scaleHover = 1.05, func, opacity})  {
+function Card({children, width='auto', height, borderRadius = 8 ,padding='auto',margin='auto' ,backgroundColor='#2b2f7f', isHover = false, scaleHover = 1.05, func, opacity, overFlow = 'overflow-hidden', className})  {
    const animacaoHover = isHover ? `transition-transform duration-200 ease-in-out hover:scale-[${scaleHover}]` : ''; 
     
    const [isMouseOver, setIsMouseOver] = useState(false);
@@ -22,7 +22,7 @@ function Card({children, width='auto', height, borderRadius = 8 ,padding='auto',
               transition: 'transform 0.2s ease-in-out', opacity: opacity ?? 1,
               
             }} 
-        className={`card px-6 py-4 p-[20px]  rounded-lg shadow-md flex flex-col items-center overflow-hidden ${animacaoHover}`}>
+        className={`${className}  px-6 py-4 p-[20px]  rounded-lg shadow-md flex flex-col items-center ${overFlow} ${animacaoHover}`}>
             {children}
         </div>
 
