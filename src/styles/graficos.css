@@ -1,0 +1,34 @@
+.language-bar:focus,
+.language-bar *:focus,
+.language-graph:focus,
+.language-graph *:focus,
+.language-graph svg:focus,
+.language-graph g:focus,
+.language-graph .recharts-legend-item *:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  stroke: none !important;
+}
+
+.language-bar:hover,
+.language-bar *:hover,
+.language-graph:hover,
+.language-graph *:hover,
+.language-graph svg:hover,
+.language-graph g:hover,
+.language-graph .recharts-legend-item *:hover {
+  outline: none !important;
+  box-shadow: none !important;
+  stroke: none !important;
+}
+
+
+.language-graph svg :focus,
+.language-graph svg *:focus {
+  outline: none !important;
+}
+
+
+.language-graph .recharts-legend-item * {
+  outline: none !important;
+}

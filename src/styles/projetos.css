@@ -21,15 +21,19 @@
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     align-items: start;
+    grid-template-areas: 
+        "repositorios linguagensPie"
+        "repositorios linguagensBar";
+
 }
 
-.repositorios-section, .linguagens-section {
+.repositorios-section, .linguagens-section ,.todas-linguagens-section {
     background-color: #5556B8;
     padding: 20px;
     border-radius: 15px;
 }
 
-.repositorios-section h2, .linguagens-section h2 {
+.repositorios-section h2, .linguagens-section h2 , .todas-linguagens-section h2 {
     font-size: 30px;
     font-weight: 700;
     color: white;
