@@ -1,7 +1,7 @@
 import '../styles/homepage.css';
 import Header from '../components/Header';
 import CardPerfil from '../components/CardPerfil';
-import Rodape from '../components/Rodape';
+import Footer from '../components/Footer';
 import  useTitulo  from '../hooks/useTitulo';
 function Homepage() {
     useTitulo('Home');
@@ -15,9 +15,9 @@ function Homepage() {
     
       </main>
 
-        <Rodape>
-            <p>© 2024 Jefferson Sampaio. Todos os direitos reservados.</p>
-        </Rodape>
+        <Footer>
+            <p>© 2026 Jefferson Sampaio. Todos os direitos reservados.</p>
+        </Footer>
      
     </div>
            

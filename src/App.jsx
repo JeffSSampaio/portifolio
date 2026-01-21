@@ -5,7 +5,7 @@ import Login from './pages/Login'
 import Info from './pages/Info'
 import Contato from './pages/Contato'
 import Feed from './pages/Feed'
-import Certificações from './pages/Certificacoes'
+
 import Projetos from './pages/Projetos'
 
 import './styles/index.css'
@@ -19,9 +19,8 @@ function App() {
           <Route path="/" element={<Navigate to="/homepage" replace />} />
         <Route path='/homepage' element={<Homepage />} />
         <Route path='/info' element={<Info />} />
-        <Route path='/contato' element={<Contato />} />
+        {/* <Route path='/contato' element={<Contato />} />*/}
         <Route path='/feed' element={<Feed />} />
-        <Route path='/certificacoes' element={<Certificações />} />
         <Route path='/projetos' element={<Projetos />} />
         
         <Route path="*" element={<Navigate to="/homepage" replace />} />

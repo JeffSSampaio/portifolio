@@ -3,7 +3,7 @@ import  useTitulo  from '../hooks/useTitulo';
 import Header from '../components/Header';
 import fotoPerfil from '../assets/fotoPerfil.svg'; 
 import Card from '../components/Card';
-import Rodape from '../components/Rodape';
+import Footer from '../components/Footer';
 import '../styles/info.css';
 
 function Info() {
@@ -112,7 +112,9 @@ function Info() {
                 </div>
             </div>
         </div>
-        <Rodape></Rodape>
+        <Footer>
+            <p className="text-center py-2 text-white">© 2026 Jefferson Sampaio</p>
+        </Footer>
             </div>
 
     )

@@ -1,6 +1,6 @@
 import  useTitulo  from '../hooks/useTitulo';
 import Header from '../components/Header';
-import Rodape from '../components/Rodape';
+import Footer from '../components/Footer';
 import Post from '../components/Post';
 function Feed() {
     useTitulo('Feed');
@@ -14,9 +14,9 @@ function Feed() {
           <Post />
           </main>
 
-          <Rodape>
-            <p className="text-center py-2 text-white">© 2024 Jefferson Sampaio</p>
-          </Rodape>
+          <Footer>
+            <p className="text-center py-2 text-white">© 2026 Jefferson Sampaio</p>
+          </Footer>
         </div>
     )
 }

@@ -10,10 +10,9 @@ function Header({children}) {
                {children}
                 <li> <a href="/info">Info</a> </li>
                 <li> <a href="/feed">Feed</a> </li>
-                <li> <a href="/certificacoes">Certificações</a> </li>
                 <li> <a href="/projetos">Projetos</a> </li>
-                <li> <a href="/contato">Contato</a> </li>
-                
+                {/* <li> <a href="/contato">Contato</a> </li> */}
+        
             </ul>
         </header>
     )
