@@ -1,4 +1,4 @@
-import { getGithubRepositorios } from "../services/github";
+import { getGithubRepositorios } from "../services/githubService";
 import { useEffect, useState } from "react";
 import Card from "./Card";
 function RepoCards({ largura='auto', altura='auto', margem , isHover, cor= '#4748abff'}) {

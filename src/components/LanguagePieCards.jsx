@@ -1,5 +1,5 @@
 
-import { getGithubTopLinguagens } from "../services/github";
+import { getGithubTopLinguagens } from "../services/githubService.js";
 import { useEffect, useState } from "react";
 import { PieChart, Pie, Cell,Legend } from "recharts";
 import "../styles/graficos.css"

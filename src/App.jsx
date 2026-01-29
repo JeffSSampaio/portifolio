@@ -20,7 +20,8 @@ function App() {
         <Route path='/homepage' element={<Homepage />} />
         <Route path='/info' element={<Info />} />
         {/* <Route path='/contato' element={<Contato />} />*/}
-        <Route path='/feed' element={<Feed />} />
+        {/* <Route path='/feed' element={<Feed />} />*/}
+      
         <Route path='/projetos' element={<Projetos />} />
         
         <Route path="*" element={<Navigate to="/homepage" replace />} />

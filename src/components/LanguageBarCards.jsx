@@ -1,6 +1,6 @@
 import { useEffect,useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from "recharts";
-import { getGithubTodasLinguagens } from "../services/github";
+import { getGithubTodasLinguagens } from "../services/githubService.js";
 import "../styles/graficos.css"
 
 function LanguageBarCards({largura, altura}) {
