@@ -59,19 +59,31 @@
     border: 3px solid white;
 }
 
+@media print {
+    .card-info {
+        width: 100%;
+        margin: 0;
+        padding: 30px;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        page-break-inside: avoid;
+    }
+}
+
 
 .conteudo-info {
     font-family: 'League Spartan', sans-serif;
     color: var(--cor-branca);
     font-weight: 800;
     font-size: 35px;
-    padding: 20px;
+    padding: 10px;
      letter-spacing: 0.9px;
       line-height: 1.15;
       text-shadow:
         0 4px 10px rgba(0, 0, 0, 0.35),
         0 1px 0 ;
-        white-space: nowrap;
+        word-wrap: break-word;
 }
 
 .conteudo-info p{
@@ -110,7 +122,7 @@
     text-shadow:
         0 4px 10px rgba(0, 0, 0, 0.35),
         0 1px 0 ;
-    white-space: nowrap;
+    word-wrap: break-word;
 }
 
 .sobre-mim , .formacao-academica , .experiencias  {
@@ -129,6 +141,70 @@
 
 
 .formacao-academica ul li{
-   font-size:25.2px;
+   font-size: auto ;
     margin-left: 20px;
 }
+
+.experiencias {
+    padding: 15px;
+    max-width: 800px;
+    background-color: var(--cor-roxo-claro);
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.experiencias h3 {
+    text-align: left !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+
+.experiencias .mb-4 > div {
+    text-align: left !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+.lista-experiencias {
+    text-align: justify !important;
+    margin-left: 20px !important;
+}
+.btn-pdf-cv{
+    cursor: pointer;
+    background-color: var(--cor-roxo-escuro, #ffffff);
+    outline: none;
+    border-radius: 20px;
+    padding: 15px;
+    border: none;
+    margin: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+
+}
+.container-btn-pdf-cv{
+    width: 55%;
+    margin: 30px auto 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+ 
+}
+
+.btn-pdf-cv:hover{
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+.btn-pdf-cv span{
+    font-size: 18px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    color: var(--cor-branca);
+}
+
+
