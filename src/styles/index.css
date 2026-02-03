@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {  
+  --cor-roxo-claro: #5556B8;     
+  --cor-roxo-escuro: hsl(239, 50%, 34%);   
+  --cor-branca: #FFFFFF;         
+}
+
+.texto{
+    font-family: 'League Spartan', sans-serif;
+    color: var(--cor-branca);
+}

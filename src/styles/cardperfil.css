@@ -1,0 +1,115 @@
+.card-perfil {
+    background-color: var(--cor-roxo-escuro);
+    padding: 60px;
+    margin: 20px auto;
+     min-height: 40rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.container-foto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.container-foto::before {
+    content: "";
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.6) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(120, 130, 255, 0.1) 60%,
+        transparent 70%
+    );
+
+    border-radius: 50%;
+    filter: blur(25px);
+    z-index: 0;
+}
+
+
+.fotoPerfil {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    position: relative;
+    z-index: 0;
+}
+
+.nome-perfil , .objetivo-perfil {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 800;
+     text-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.35),
+        0 1px 0 ;
+}
+
+.nome-perfil {
+    font-size: 90px;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.objetivo-perfil {
+    font-size: 50px;
+    color: transparent;
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.6;
+    -webkit-text-stroke: 0.8px white;
+    letter-spacing: 0.8px;
+     
+}
+
+.container-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.container-perfil h3 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.35),
+        0 1px 0 ;
+}
+
+.container-icons {
+    display: flex;       
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+.icon:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}

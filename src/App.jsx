@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import Homepage from './pages/Homepage'
+import Dashboard from './pages/Dashboard'
+import Login from './pages/Login'
+import Info from './pages/Info'
+import Contato from './pages/Contato'
+import Feed from './pages/Feed'
+
+import Projetos from './pages/Projetos'
+
+import './styles/index.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const adminPath = import.meta.env.VITE_ADMIN_PATH;
+  const dashboardPath = import.meta.env.VITE_DASHBOARD_PATH;
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+          <Route path="/" element={<Navigate to="/portifolio/homepage" replace />} />
+        <Route path='/portifolio/homepage' element={<Homepage />} />
+        <Route path='/portifolio/info' element={<Info />} />
+        {/* <Route path='/contato' element={<Contato />} />*/}
+        {/* <Route path='/feed' element={<Feed />} />*/}
+      
+        <Route path='/portifolio/projetos' element={<Projetos />} />
+        
+        <Route path="*" element={<Navigate to="/homepage" replace />} />
+
+        <Route path={adminPath} element={<Login />} />
+        <Route path={dashboardPath} element={<Dashboard />} />
+        
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App

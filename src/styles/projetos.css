@@ -1,0 +1,93 @@
+.titulo-projetos {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.5;
+}
+
+.container-projetos {
+    background-color: var(--cor-roxo-escuro);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+    grid-template-areas: 
+        "repositorios linguagensPie"
+        "repositorios linguagensBar";
+
+}
+
+.repositorios-section, .linguagens-section ,.todas-linguagens-section {
+    background-color: #5556B8;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.repositorios-section h2, .linguagens-section h2 , .todas-linguagens-section h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+    font-family: 'League Spartan', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.repo-scroll {
+  max-height: 400px; 
+  overflow-y: auto;
+  padding-right: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.repo-scroll::-webkit-scrollbar {
+  width: 0px;
+  transition: width 0.3s ease;
+}
+
+.repo-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.repo-scroll::-webkit-scrollbar-thumb {
+  background-color: #7c7eff;
+  border-radius: 10px;
+
+}
+
+
+.repo-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #7c7eff transparent;
+}
+.texto-repo-card {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    line-height: 1.4;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+
