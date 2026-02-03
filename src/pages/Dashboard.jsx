@@ -4,7 +4,7 @@ function Dashboard({children}) {
     useTitulo('Dashboard');
     return(
         <div> 
-                <Header children={ <li><a href="/homepage">Home</a></li>}/>
+                <Header children={ <li><a href="/portifolio/homepage">Home</a></li>}/>
              <main>{children}</main>
         </div>
     );

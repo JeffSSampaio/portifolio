@@ -24,7 +24,7 @@ function App() {
       
         <Route path='/portifolio/projetos' element={<Projetos />} />
         
-        <Route path="*" element={<Navigate to="/portifolio/homepage" replace />} />
+        <Route path="*" element={<Navigate to="/homepage" replace />} />
 
         <Route path={adminPath} element={<Login />} />
         <Route path={dashboardPath} element={<Dashboard />} />

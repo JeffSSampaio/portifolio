@@ -4,11 +4,12 @@ import '../styles/projetos.css';
 import LanguagePieCards from '../components/LanguagePieCards';
 import LanguageBarCards from '../components/LanguageBarCards';
 import RepoCards from '../components/RepoCards';
+import Footer from '../components/Footer';
 function Projetos() {
     useTitulo('Projetos');
     return(
         <div>
-          <Header children={ <li><a href="/homepage">Home</a></li>}/>
+          <Header children={ <li><a href="/portifolio/homepage">Home</a></li>}/>
 
           <h1 className='titulo-projetos flex items-center justify-center mt-[20px]'> Projetos</h1>
           
@@ -30,7 +31,9 @@ function Projetos() {
               </div>
             </div>
           </div>
-            
+            <Footer> 
+              <p className="text-center py-2 text-white">© 2026 Jefferson Sampaio</p>
+            </Footer>
         </div>
     )
 }

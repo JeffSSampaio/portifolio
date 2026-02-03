@@ -6,7 +6,7 @@ function Feed() {
     useTitulo('Feed');
     return(
         <div className="flex flex-col min-h-screen"> 
-              <Header children={ <li><a href="/homepage">Home</a></li>}/>
+              <Header children={ <li><a href="/portifolio/homepage">Home</a></li>}/>
           
           <h1 className='flex items-center justify-center m-[20px] texto text-[30px] font-bold'>Publicações</h1>
           
