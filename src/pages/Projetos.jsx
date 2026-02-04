@@ -10,7 +10,7 @@ function Projetos() {
     useTitulo('Projetos');
     return(
         <div>
-          <Header children={ <li><Link to="/homepage">Home</Link></li>}/>
+          <Header children={ <li><Link to="/">Home</Link></li>}/>
 
           <h1 className='titulo-projetos flex items-center justify-center mt-[20px]'> Projetos</h1>
           

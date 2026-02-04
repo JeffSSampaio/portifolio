@@ -96,7 +96,7 @@ function Info() {
 
             <div>
 
-         <Header children={ <li><Link to="/homepage">Home</Link></li>}/>
+         <Header children={ <li><Link to="/">Home</Link></li>}/>
         <div className='flex justify-center flex-col items-center'>
            <div className='container-btn-pdf-cv'>
 
