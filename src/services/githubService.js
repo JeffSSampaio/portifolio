@@ -1,15 +1,11 @@
 
 const urlBase = 'https://api.github.com';
 
-const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_API_TOKEN;
+
 
 export async function getGithubUsuario() {
   
- const response = await fetch(`${urlBase}/users/JeffSSampaio`, {
-    headers: {
-      Authorization: `Bearer ${GITHUB_TOKEN}`,
-    },
-  });
+ const response = await fetch(`${urlBase}/users/JeffSSampaio`);
  if (!response.ok) {
     throw new Error('Erro ao buscar dados do usuário no GitHub');
     }   
@@ -18,11 +14,7 @@ export async function getGithubUsuario() {
 }
 
 export async function getGithubRepositorios(){
-    const response = await fetch(`${urlBase}/users/JeffSSampaio/repos`, {
-      headers: {
-        Authorization: `Bearer ${GITHUB_TOKEN}`,
-      },
-    });
+    const response = await fetch(`${urlBase}/users/JeffSSampaio/repos`);
     if (!response.ok) {
         throw new Error('Erro ao buscar repositórios do GitHub');
     }
@@ -37,11 +29,7 @@ export async function getGithubTodasLinguagens(){
         
         
         for (const repo of repos) {
-            const response = await fetch(`${urlBase}/repos/JeffSSampaio/${repo.name}/languages`, {
-              headers: {
-                Authorization: `Bearer ${GITHUB_TOKEN}`,
-              },
-            });
+            const response = await fetch(`${urlBase}/repos/JeffSSampaio/${repo.name}/languages`);
             if (response.ok) {
                 const languages = await response.json();
                 Object.entries(languages).forEach(([lang, bytes]) => {
@@ -61,11 +49,7 @@ export async function getGithubTopLinguagens(top = 4) {
     const languagesMap = {};
 
     for (const repo of repos) {
-      const response = await fetch(`${urlBase}/repos/JeffSSampaio/${repo.name}/languages`, {
-        headers: {
-          Authorization: `Bearer ${GITHUB_TOKEN}`,
-        },
-      });
+      const response = await fetch(`${urlBase}/repos/JeffSSampaio/${repo.name}/languages`);
       if (response.ok) {
         const languages = await response.json();
         Object.entries(languages).forEach(([lang, bytes]) => {
