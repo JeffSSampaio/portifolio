@@ -23,12 +23,12 @@ function Projetos() {
               
               <div className='linguagens-section' style={{gridArea:"linguagensPie"}}>
                 <h2>Linguagens mais utilizadas</h2>
-                <LanguagePieCards largura={500} altura={400} margem={{ top: -90, right: 10, left: 10, bottom: 5 }}/>
+                <LanguagePieCards largura={'100%'} altura={400} margem={{ top: -10, right: 20, left: 20, bottom: 5 }}/>
              
               </div>
               <div className='todas-linguagens-section todasLinguagens' style={{gridArea:"linguagensBar"}}>
                 <h2>Todas as linguagens</h2>
-                <LanguageBarCards largura={'100%'} altura={400} />
+                <LanguageBarCards largura={'100%'} altura={400} margem={{ top: -10, right: 20, left: 20, bottom: 5 }} />
               </div>
             </div>
           </div>

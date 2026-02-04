@@ -3,60 +3,105 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 
 import { getGithubTodasLinguagens } from "../services/githubService.js";
 import "../styles/graficos.css"
 
-function LanguageBarCards({largura, altura}) {
-    const [dados, setDados] = useState([]);
-     useEffect(() => {
+function LanguageBarCards({ altura = 400 }) {
+  const [dados, setDados] = useState([]);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 740);
+
+  useEffect(() => {
+    const resize = () => setIsMobile(window.innerWidth < 740);
+    window.addEventListener("resize", resize);
+    return () => window.removeEventListener("resize", resize);
+  }, []);
+
+  useEffect(() => {
     async function carregar() {
       const linguagens = await getGithubTodasLinguagens();
       const total = Object.values(linguagens).reduce((acc, v) => acc + v, 0);
+
       const formatado = Object.entries(linguagens)
         .map(([name, value]) => ({
           name,
-          value:Math.round((value / total)*100)
+          value: Math.round((value / total) * 100),
         }))
-        .sort((a, b) => b.value - a.value); 
+        .sort((a, b) => b.value - a.value);
 
       setDados(formatado);
     }
 
     carregar();
   }, []);
-    return(
-        <div className="language-graph" style={{ width: largura || '100%', height: altura || 400 }}>
-          <ResponsiveContainer width="100%" height="100%" >
-            <BarChart data={dados} layout="vertical" margin={{ top: 20, right: 30, left: 100, bottom: 5 }}>
-              <XAxis type="number"
-              domain={[0,100]}
-              tickFormatter={(value)=>`${value}%`}
-              interval={2}
-              ticks={[0,20,40,50,60,80,100]}
-              tick={({ x, y, payload }) => (
-             <text x={x} y={y + 5} textAnchor="middle" fill={"#fff"} fontSize={12} fontFamily="League Spartan" fontWeight="bold">
-             {payload.value}%
-            </text>
-  )}
-/>
-              <YAxis dataKey="name" type="category" width={100}
-              tick={({ x, y, payload, index }) => (
-             <text x={x} y={y} dy={4} textAnchor="end" fill={`hsl(${(index * 137.5) % 360}, 70%, 50%)`} fontSize={14} fontFamily="League Spartan" fontWeight="bold">
+
+  return (
+    <div className="language-bar" style={{ width: "100%", height: altura }}>
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart
+          data={dados}
+          layout="vertical"
+          margin={{
+            top: 20,
+            right: isMobile ? 30 : 60,
+            left: isMobile ? -20 : 20,
+            bottom: 10,
+          }}
+        >
+          <XAxis
+            type="number"
+            domain={[0, 100]}
+            tickFormatter={(v) => `${v}%`}
+            tick={{
+              fill: "#fff",
+              fontSize: isMobile ? 10 : 12,
+              fontFamily: "League Spartan",
+              fontWeight: "bold",
+            }}
+          />
+
+          <YAxis
+            type="category"
+            dataKey="name"
+            width={isMobile ? 70 : 100}
+            tick={({ x, y, payload, index }) => (
+              <text
+                x={x}
+                y={y}
+                dy={4}
+                textAnchor="end"
+                fill={`hsl(${(index * 137.5) % 360}, 70%, 50%)`}
+                fontSize={isMobile ? 11 : 14}
+                fontFamily="League Spartan"
+                fontWeight="bold"
+              >
                 {payload.value}
               </text>
-                )}
-/>
+            )}
+          />
+         { isMobile && ( <Tooltip
+            formatter={(value) => `${value}%`}
+            cursor={{ fill: "rgba(255,255,255,0.05)"
+             }}
+              contentStyle={{
+                backgroundColor: "#333",
+                border: "none",
+                borderRadius: "8px",
+                fontFamily: "League Spartan",
+                color: "#fff",
+              }}
+              itemStyle={{ color: "#fff" }}
 
-              <Bar dataKey="value" fill="#8884d8">
-                {dados.map((entry, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={`hsl(${(index * 137.5) % 360}, 70%, 50%)`}
-                  />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-    );
-
+          />)
+}
+          <Bar dataKey="value">
+            {dados.map((_, index) => (
+              <Cell
+                key={index}
+                fill={`hsl(${(index * 137.5) % 360}, 70%, 50%)`}
+              />
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  );
 }
 
 export default LanguageBarCards;

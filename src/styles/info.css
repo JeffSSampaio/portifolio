@@ -208,3 +208,98 @@
 }
 
 
+@media screen and (max-width: 740px) {
+
+  /* Card principal */
+  .card-info {
+    width: 95%;
+    margin: 20px auto;
+    padding: 12px;
+    min-height: auto;
+    border-radius: 16px;
+  }
+
+  /* Botão PDF */
+  .container-btn-pdf-cv {
+    width: 95%;
+    justify-content: center ;
+  }
+
+  .btn-pdf-cv {
+    width: 100%;
+    padding: 14px;
+    justify-content: center;
+  }
+
+  .btn-pdf-cv span {
+    font-size: 16px;
+    
+  }
+  .btn-pdf-cv :hover {
+    transform: scale(1.03);
+  }
+  /* Foto de perfil */
+  .container-foto-info::before {
+    width: 180px;
+    height: 180px;
+    filter: blur(20px);
+  }
+
+  .fotoPerfilInfo {
+    height: 140px;
+    width: 140px;
+  }
+
+  /* Conteúdo principal (foto + nome) */
+  .conteudo-principal {
+    flex-direction: column !important;
+    gap: 10px;
+    text-align: center;
+  }
+
+  /* Nome + título */
+  .conteudo-info {
+    font-size: 22px;
+    padding: 6px;
+  }
+
+  .conteudo-info p {
+    font-size: 16px;
+    -webkit-text-stroke: 0.6px white;
+  }
+
+  /* Seções */
+  .sobre-mim,
+  .formacao-academica,
+  .experiencias {
+    max-width: 100%;
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .sobre-mim h2,
+  .formacao-academica h2,
+  .experiencias h2 {
+    font-size: 26px;
+    text-align: left;
+  }
+
+  /* Listas */
+  .formacao-academica ul li,
+  .lista-experiencias li {
+    font-size: 16px;
+    margin-left: 14px;
+  }
+
+  /* Experiências (cards internos) */
+  .experiencias {
+    align-items: stretch;
+  }
+
+}
+
+@media print {
+    .btn-pdf-cv, .container-btn-pdf-cv {
+        display: none;
+    }
+}

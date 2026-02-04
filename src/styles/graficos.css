@@ -32,3 +32,13 @@
 .language-graph .recharts-legend-item * {
   outline: none !important;
 }
+
+@media screen and (max-width: 740px) {
+  .language-graph {
+    min-height: 280px;
+  }
+
+  .recharts-text {
+    font-size: 11px !important;
+  }
+}

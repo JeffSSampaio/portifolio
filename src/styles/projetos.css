@@ -91,3 +91,65 @@
     }
 
 
+
+    @media screen and (max-width: 740px) {
+
+  /* Título principal */
+  .titulo-projetos {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  /* Container geral */
+  .container-projetos {
+    width: 95%;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 16px;
+  }
+
+  /* Grid vira coluna */
+  .projetos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Seções */
+  .repositorios-section,
+  .linguagens-section,
+  .todas-linguagens-section {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  /* Títulos das seções */
+  .repositorios-section h2,
+  .linguagens-section h2,
+  .todas-linguagens-section h2 {
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  /* Scroll dos repositórios */
+  .repo-scroll {
+    max-height: 300px;
+    padding-right: 4px;
+  }
+
+  /* Texto dos cards */
+  .texto-repo-card {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+
+  .todas-linguagens-section{
+    padding: 50px 50px;
+  }
+
+
+  
+}
