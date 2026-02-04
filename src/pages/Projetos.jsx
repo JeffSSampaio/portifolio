@@ -5,11 +5,12 @@ import LanguagePieCards from '../components/LanguagePieCards';
 import LanguageBarCards from '../components/LanguageBarCards';
 import RepoCards from '../components/RepoCards';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 function Projetos() {
     useTitulo('Projetos');
     return(
         <div>
-          <Header children={ <li><a href="/portifolio/homepage">Home</a></li>}/>
+          <Header children={ <li><Link to="/homepage">Home</Link></li>}/>
 
           <h1 className='titulo-projetos flex items-center justify-center mt-[20px]'> Projetos</h1>
           

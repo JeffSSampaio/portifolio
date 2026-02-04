@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import { useInfo } from '../hooks/useInfo';
 import '../styles/info.css';
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 function Info() {
 
@@ -95,7 +96,7 @@ function Info() {
 
             <div>
 
-         <Header children={ <li><a href="/portifolio/homepage">Home</a></li>}/>
+         <Header children={ <li><Link to="/homepage">Home</Link></li>}/>
         <div className='flex justify-center flex-col items-center'>
            <div className='container-btn-pdf-cv'>
 
