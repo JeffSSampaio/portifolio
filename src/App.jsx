@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Homepage from './pages/Homepage'
 import Dashboard from './pages/Dashboard'
 import Login from './pages/Login'
@@ -14,23 +14,15 @@ function App() {
   const adminPath = import.meta.env.VITE_ADMIN_PATH;
   const dashboardPath = import.meta.env.VITE_DASHBOARD_PATH;
   return (
-    <BrowserRouter basename='/portifolio'>
+     <HashRouter>
       <Routes>
-          <Route path="/" element={<Navigate to="/homepage" replace />} />
-        <Route path='/homepage' element={<Homepage />} />
-        <Route path='/info' element={<Info />} />
-        {/* <Route path='/contato' element={<Contato />} />*/}
-        {/* <Route path='/feed' element={<Feed />} />*/}
-      
-        <Route path='/projetos' element={<Projetos />} />
-        
-        <Route path="*" element={<Navigate to="/homepage" replace />} />
-
-        <Route path={adminPath} element={<Login />} />
-        <Route path={dashboardPath} element={<Dashboard />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/info" element={<Info />} />
+        <Route path="/projetos" element={<Projetos />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
         
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
