@@ -14,15 +14,15 @@ function App() {
   const adminPath = import.meta.env.VITE_ADMIN_PATH;
   const dashboardPath = import.meta.env.VITE_DASHBOARD_PATH;
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/portifolio'>
       <Routes>
-          <Route path="/" element={<Navigate to="/portifolio/homepage" replace />} />
-        <Route path='/portifolio/homepage' element={<Homepage />} />
-        <Route path='/portifolio/info' element={<Info />} />
+          <Route path="/" element={<Navigate to="/homepage" replace />} />
+        <Route path='/homepage' element={<Homepage />} />
+        <Route path='/info' element={<Info />} />
         {/* <Route path='/contato' element={<Contato />} />*/}
         {/* <Route path='/feed' element={<Feed />} />*/}
       
-        <Route path='/portifolio/projetos' element={<Projetos />} />
+        <Route path='/projetos' element={<Projetos />} />
         
         <Route path="*" element={<Navigate to="/homepage" replace />} />
 
