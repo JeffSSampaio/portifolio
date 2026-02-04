@@ -113,3 +113,43 @@
     transform: scale(1.2);
     cursor: pointer;
 }
+
+
+@media (max-width: 480px) {
+    .card-perfil {
+        padding: 80px 10px; 
+        width: 95%; 
+   
+    }
+
+    .container-foto::before {
+        width: 250px; 
+        height: 250px;
+    }
+
+    .fotoPerfil {
+        width: 180px; 
+        height: 180px;
+    }
+
+    .nome-perfil {
+        font-size: 45px; 
+        line-height: 1.1;
+        margin-bottom: 10px;
+    }
+
+    .objetivo-perfil {
+        font-size: 24px; 
+        -webkit-text-stroke: 0.5px white; 
+        max-width: 100%;
+    }
+
+    .container-perfil h3 {
+        font-size: 20px;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+}
